@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {MyPost} from "./MyPost/MyPost";
 
 export const Profile = () => {
     return (
@@ -8,14 +9,7 @@ export const Profile = () => {
                 <img src="https://wallpapers.com/images/featured/nature-2ygv7ssy2k0lxlzu.jpg" alt="image"/>
             </div>
             <div>Avatar Description</div>
-            <div>
-                My Posts
-                <div>New Post</div>
-                <div>
-                    <div>Post1</div>
-                    <div>Post2</div>
-                </div>
-            </div>
+            <MyPost/>
         </ProfileWrapper>
     );
 };
@@ -28,5 +22,5 @@ const ProfileWrapper = styled.div`
         width: 100%;
         height: 700px;
     }
-
 `
+

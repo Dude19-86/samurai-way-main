@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import styled from "styled-components";
-import {Header} from "./components/HeaderWrapper";
-import {NavBar} from "./components/NavBar";
-import {Profile} from "./components/ProfileWrapper";
+import {Header} from "./components/Header/Header";
+import {NavBar} from "./components/Navbar/NavBar";
+import {Profile} from "./components/Profile/Profile";
 
 
 export const App = () => (
