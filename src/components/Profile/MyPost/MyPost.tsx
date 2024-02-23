@@ -9,8 +9,8 @@ export const MyPost = () => {
         <MyPostWrapper>
                 My Posts
             <div>
-                <TextArea></TextArea>
-                <Button>Add Post</Button>
+                <TextArea style={{width: '200px', height: '60px'}}></TextArea>
+                <Button type={"primary"}>Add Post</Button>
             </div>
                 <Posts>
                     <Post message={'Hi, how are you?'}/>
@@ -27,3 +27,5 @@ const MyPostWrapper = styled.div`
 const Posts = styled.div`
 
 `
+
+

@@ -1,10 +1,10 @@
 .App {
-  padding-left: 20px;
-  /*text-align: center;*/
+    padding-left: 20px;
+    /*text-align: center;*/
 }
 
 a:nth-child(n + 2) {
-  padding-left: 15px;
+    padding-left: 15px;
 }
 
 /*.App-logo {*/
@@ -44,5 +44,19 @@ a:nth-child(n + 2) {
 
 
 .app-wrapper {
-  display: grid;
+    background-color: skyblue;
+    display: grid;
+    margin: 0 auto;
+    width: 100%;
+    grid-template-areas:
+    'h h'
+    'n c';
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
+    grid-gap: 10px;
+}
+
+.app-wrapper-content {
+    grid-area: c;
+    background-color: cornflowerblue;
 }

@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 export const NavBar = () => {
     return (
         <NavWrapper>
             <NavBarList>
-                <List><NavLink href="#">Profile</NavLink></List>
-                <List><NavLink href="#">Messages</NavLink></List>
-                <List><NavLink href="#">News</NavLink></List>
-                <List><NavLink href="#">Music</NavLink></List>
-                <List><NavLink href="#">Settings</NavLink></List>
+                <List><Link to={'/profile'}>Profile</Link></List>
+                <List><Link to={'/dialogs'}>Messages</Link></List>
+                <List><Link to={'/news'}>News</Link></List>
+                <List><Link to={'/music'}>Music</Link></List>
+                <List><Link to={'/settings'}>Settings</Link></List>
             </NavBarList>
         </NavWrapper>
     );
@@ -24,9 +25,16 @@ const NavBarList = styled.ul`
 `
 
 const List = styled.li`
-  
+
 `
 
 const NavLink = styled.a`
-  color: white;
+    //color: white;
+    //  &:visited {
+    //      color: blue;
+    //  }
+
+    &:hover {
+        color: green;
+    }
 `

@@ -4,23 +4,24 @@ import {MyPost} from "./MyPost/MyPost";
 
 export const Profile = () => {
     return (
-        <ProfileWrapper>
+        <div>
             <div>
-                <img src="https://wallpapers.com/images/featured/nature-2ygv7ssy2k0lxlzu.jpg" alt="image"/>
+                <Image src="https://wallpapers.com/images/featured/nature-2ygv7ssy2k0lxlzu.jpg" alt="image"/>
             </div>
             <div>Avatar Description</div>
             <MyPost/>
-        </ProfileWrapper>
+        </div>
     );
 };
 
 const ProfileWrapper = styled.div`
     grid-area: c;
     background-color: cornflowerblue;
+`
 
-    img {
+const Image = styled.img`
         width: 100%;
         height: 700px;
-    }
+        object-fit: cover;
 `
 

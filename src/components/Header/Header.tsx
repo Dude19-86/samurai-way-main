@@ -19,5 +19,6 @@ const HeaderWrapper = styled.header`
         width: 93px;
         background-color: green;
         color: green;
+        object-fit: cover;
     }
 `
