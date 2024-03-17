@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from "styled-components";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 export const NavBar = () => {
     return (
         <NavWrapper>
             <NavBarList>
-                <List><Link to={'/profile'}>Profile</Link></List>
-                <List><Link to={'/dialogs'}>Messages</Link></List>
-                <List><Link to={'/news'}>News</Link></List>
-                <List><Link to={'/music'}>Music</Link></List>
-                <List><Link to={'/settings'}>Settings</Link></List>
+                <List><NavLink to={'/profile'}>Profile</NavLink></List>
+                <List><NavLink to={'/dialogs'}>Messages</NavLink></List>
+                <List><NavLink to={'/news'}>News</NavLink></List>
+                <List><NavLink to={'/music'}>Music</NavLink></List>
+                <List><NavLink to={'/settings'}>Settings</NavLink></List>
             </NavBarList>
         </NavWrapper>
     );
@@ -19,22 +19,24 @@ export const NavBar = () => {
 const NavWrapper = styled.nav`
     grid-area: n;
     background-color: burlywood;
+    padding: 20px;
 `
 
 const NavBarList = styled.ul`
 `
 
 const List = styled.li`
-
-`
-
-const NavLink = styled.a`
-    //color: white;
-    //  &:visited {
-    //      color: blue;
-    //  }
-
-    &:hover {
-        color: green;
+    a {
+        color: white;
+        &:hover {
+            color: green;
+        }
+        
+        &.active {
+            color: gold
+        }
+        & {
+            text-decoration: none;
+        }
     }
 `

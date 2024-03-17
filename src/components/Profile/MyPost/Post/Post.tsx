@@ -6,20 +6,21 @@ import {DislikeFilled, LikeFilled, LikeTwoTone} from "@ant-design/icons";
 
 type PostType = {
     message: string
+    likesCount: string
 }
 
-export const Post = (props: PostType) => {
+export const Post = ({message, likesCount, ...restProps}: PostType) => {
 
     // const dataSource = [
     //     {
     //         key: '1',
-    //         name: 'Mike',
+    //         messages: 'Mike',
     //         age: 32,
     //         address: '10 Downing Street',
     //     },
     //     {
     //         key: '2',
-    //         name: 'John',
+    //         messages: 'John',
     //         age: 42,
     //         address: '10 Downing Street',
     //     },
@@ -28,8 +29,8 @@ export const Post = (props: PostType) => {
     // const columns = [
     //     {
     //         title: 'Name',
-    //         dataIndex: 'name',
-    //         key: 'name',
+    //         dataIndex: 'messages',
+    //         key: 'messages',
     //     },
     //     {
     //         title: 'Age',
@@ -48,7 +49,9 @@ export const Post = (props: PostType) => {
             <div>
                 <Image style={{width: '70px'}} src={image} alt=""/>
             </div>
-            {props.message}
+            <span>{message} </span>
+            <div><span style={{ paddingLeft: '10px'}}>like {likesCount}</span></div>
+
             <div>
                 {/*<Table dataSource={dataSource} columns={columns}/>;*/}
                 <Button shape={"circle"} type={"primary"}><LikeFilled rev={undefined}/></Button>

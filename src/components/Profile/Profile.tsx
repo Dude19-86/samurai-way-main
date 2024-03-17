@@ -1,27 +1,26 @@
 import React from 'react';
 import styled from "styled-components";
 import {MyPost} from "./MyPost/MyPost";
+import {ProfileInfo} from "./ProfileInfo/ProfileInfo";
+import {PostDataType} from "../redux/state";
 
-export const Profile = () => {
+type ProfileType = {
+    postData: PostDataType[]
+}
+export const Profile = ({postData, ...restProps}: ProfileType) => {
     return (
-        <div>
-            <div>
-                <Image src="https://wallpapers.com/images/featured/nature-2ygv7ssy2k0lxlzu.jpg" alt="image"/>
-            </div>
-            <div>Avatar Description</div>
-            <MyPost/>
-        </div>
+        <ProfileWrapper>
+            <ProfileInfo />
+            <MyPost postData={postData}/>
+        </ProfileWrapper>
     );
 };
 
 const ProfileWrapper = styled.div`
-    grid-area: c;
-    background-color: cornflowerblue;
+    //grid-area: c;
+    //background-color: cornflowerblue;
+    //padding: 10px;
 `
 
-const Image = styled.img`
-        width: 100%;
-        height: 700px;
-        object-fit: cover;
-`
+
 
